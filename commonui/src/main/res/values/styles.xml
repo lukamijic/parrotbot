@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/parrotbot_blue</item>
+        <item name="colorPrimaryDark">@color/parrotbot_blue_dark</item>
+        <item name="colorAccent">@color/parrotbot_primary</item>
+
+        <item name="android:statusBarColor">@color/status_bar</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
+    <style name="Icon">
+        <item name="android:layout_width">@dimen/icon_clickable_min_size</item>
+        <item name="android:layout_height">@dimen/icon_clickable_min_size</item>
+        <item name="android:padding">@dimen/icon_clickable_min_padding</item>
+    </style>
+
+    <style name="IconButton" parent="Icon">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="ButtonTextStyle" parent="Text.16">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="Text">
+        <item name="android:ellipsize">end</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textDirection">locale</item>
+        <item name="android:textColor">@color/font_primary</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Text.12">
+        <item name="android:textSize">@dimen/text_12</item>
+    </style>
+
+    <style name="Text.14">
+        <item name="android:textSize">@dimen/text_14</item>
+    </style>
+
+    <style name="Text.16">
+        <item name="android:textSize">@dimen/text_16</item>
+    </style>
+
+    <style name="Text.20">
+        <item name="android:textSize">@dimen/text_20</item>
+    </style>
+
+    <style name="Text.24">
+        <item name="android:textSize">@dimen/text_24</item>
+    </style>
+
+    <style name="Text.32">
+        <item name="android:textSize">@dimen/text_32</item>
+    </style>
+
+    <style name="Text.48">
+        <item name="android:textSize">@dimen/text_48</item>
+    </style>
+</resources>
