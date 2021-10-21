@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="parrotbot">ParrotBot</string>
+    <string name="message_box_hint">What\'s on your mind?</string>
+</resources>
