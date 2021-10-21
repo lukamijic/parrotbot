@@ -3,7 +3,6 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
     }
 }
 rootProject.name = "ParrotBot"
@@ -11,3 +10,4 @@ include ':parrotbot'
 include ':core'
 include ':coreui'
 include ':commonui'
+include ':chat'

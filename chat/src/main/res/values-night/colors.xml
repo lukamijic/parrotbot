@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="chat_background">@color/mirage</color>
+    <color name="chat_message_box_background">@color/pickled_bluewood</color>
+    <color name="chat_parrotbot_message_background">@color/pickled_bluewood</color>
+</resources>

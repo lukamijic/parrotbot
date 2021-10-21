@@ -20,6 +20,11 @@
         <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
     </style>
 
+    <style name="CircleImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
     <style name="ButtonTextStyle" parent="Text.16">
         <item name="android:fontFamily">@font/roboto_bold</item>
     </style>

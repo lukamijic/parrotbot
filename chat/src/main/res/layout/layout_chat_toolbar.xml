@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/chat_toolbar_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="@dimen/elevation_8"
+    android:background="@color/parrotbot_background">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/parrotbot_icon"
+        android:layout_width="@dimen/chat_parrot_icon_size"
+        android:layout_height="@dimen/chat_parrot_icon_size"
+        android:src="@drawable/ic_parrot"
+        android:layout_marginStart="@dimen/chat_parrot_icon_margin_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/chat_parrot_name_margin_horizontal"
+        style="@style/Text.16"
+        android:text="@string/parrotbot"
+        app:layout_constraintStart_toEndOf="@id/parrotbot_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
