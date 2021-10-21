@@ -11,28 +11,29 @@
         android:id="@+id/chat_box"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/chat_message_box_margin"
+        android:background="@drawable/bg_big_rounded"
+        android:backgroundTint="@color/chat_message_box_background"
         android:hint="@string/message_box_hint"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLines="5"
+        android:padding="@dimen/chat_message_box_padding"
         android:textAppearance="@style/Text.14"
         app:boxStrokeWidth="0dp"
         app:boxStrokeWidthFocused="0dp"
-        android:background="@drawable/bg_big_rounded"
-        android:backgroundTint="@color/chat_message_box_background"
-        android:padding="@dimen/chat_message_box_padding"
-        android:layout_margin="@dimen/chat_message_box_margin"
-        android:maxLines="5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/send"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/send"
         style="@style/IconButton"
-        android:src="@drawable/ic_send"
-        android:layout_marginBottom="@dimen/chat_send_button_margin"
         android:layout_marginEnd="@dimen/chat_send_button_margin"
+        android:layout_marginBottom="@dimen/chat_send_button_margin"
+        android:src="@drawable/ic_send"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/chat_box"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toEndOf="@id/chat_box" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

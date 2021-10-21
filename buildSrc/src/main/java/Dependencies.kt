@@ -49,3 +49,11 @@ object Concurrency {
 
     val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
 }
+
+object Database {
+    private val room_version = "2.3.0"
+
+    val room = "androidx.room:room-runtime:$room_version"
+    val roomCompiler = "androidx.room:room-compiler:$room_version"
+    val roomFlow = "androidx.room:room-ktx:$room_version"
+}

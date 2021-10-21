@@ -7,5 +7,10 @@ import org.koin.dsl.module
 
 fun chatModule(): Module = module {
 
-    viewModel { ChatViewModel() }
+    viewModel {
+        ChatViewModel(
+            sendMessage = get(),
+            queryMessages = get()
+        )
+    }
 }
