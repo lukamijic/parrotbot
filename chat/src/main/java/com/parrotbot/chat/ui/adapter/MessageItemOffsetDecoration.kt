@@ -19,8 +19,8 @@ class MessageItemOffsetDecoration(resources: Resources) : RecyclerView.ItemDecor
             val itemType = parent.adapter?.getItemViewType(position)
 
             when (previousItemType) {
-                itemType -> outRect.apply { set(left, top, right, sameTypeMargin) }
-                else -> outRect.apply { set(left, top, right, differentTypeMargin) }
+                itemType -> outRect.apply { set(left, sameTypeMargin, right, bottom) }
+                else -> outRect.apply { set(left, differentTypeMargin, right, bottom) }
             }
         }
     }

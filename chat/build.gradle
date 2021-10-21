@@ -7,6 +7,7 @@ dependencies {
     implementation project(":core")
     implementation project(":coreui")
     implementation project(":commonui")
+    implementation project(":chatlib")
 
     implementation AndroidX.constraintLayout
     implementation UI.materialComponents

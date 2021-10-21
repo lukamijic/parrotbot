@@ -2,4 +2,6 @@ package com.parrotbot.chat.ui
 
 import com.parrotbot.chat.ui.adapter.Message
 
-data class ChatViewState(val messages: List<Message>)
+sealed class ChatViewState
+data class Messages(val messages: List<Message>) : ChatViewState()
+data class SendButtonEnabled(val isEnabled: Boolean) : ChatViewState()
