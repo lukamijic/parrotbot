@@ -13,6 +13,7 @@ import com.parrotbot.chat.databinding.ItemUserMessageBinding
 import com.parrotbot.commonui.span.CustomTypefaceSpan
 import com.parrotbot.coreui.BaseListAdapter
 import com.parrotbot.coreui.BaseViewHolder
+import com.parrotbot.coreui.ext.show
 
 private const val USER_MESSAGE = 0
 private const val PARROTBOT_MESSAGE = 1
@@ -47,6 +48,7 @@ class MessagesAdapter(private val layoutInflater: LayoutInflater) : BaseListAdap
 
         override fun ItemUserMessageBinding.render(item: UserMessage) {
             message.text = item.message
+            tail.show(item.hasTail)
         }
     }
 
@@ -56,6 +58,7 @@ class MessagesAdapter(private val layoutInflater: LayoutInflater) : BaseListAdap
 
         override fun ItemParrotbotMessageBinding.render(item: ParrotBotMessage) {
             message.text = item.message
+            tail.show(item.hasTail)
         }
     }
 
