@@ -2,6 +2,7 @@ package com.parrotbot.chat.ui
 
 import com.parrotbot.chat.ui.adapter.ParrotBotMessage
 import com.parrotbot.chat.ui.adapter.UserMessage
+import com.parrotbot.chat.ui.mapper.MessagesViewStateMapper
 import com.parrotbot.chatlib.model.domain.Sender
 import com.parrotbot.chatlib.usecase.QueryMessages
 import com.parrotbot.chatlib.usecase.SendMessage
@@ -13,7 +14,8 @@ import kotlinx.coroutines.flow.map
 
 class ChatViewModel(
     private val sendMessage: SendMessage,
-    private val queryMessages: QueryMessages
+    private val queryMessages: QueryMessages,
+    private val messagesViewStateMapper: MessagesViewStateMapper
 ) : BaseViewModel<ChatViewState>() {
 
     private val currentMessage = MutableStateFlow("")
@@ -21,15 +23,7 @@ class ChatViewModel(
     init {
         query {
             queryMessages()
-                .map { messages ->
-                    messages.map {
-                        when (it.sender) {
-                            Sender.USER -> UserMessage(it.id, it.message)
-                            Sender.PARROT_BOT -> ParrotBotMessage(it.id, it.message)
-                        }
-                    }
-                }
-                .map(::Messages)
+                .map(messagesViewStateMapper::toViewState)
         }
 
         query {

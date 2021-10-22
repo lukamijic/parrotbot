@@ -40,7 +40,7 @@ class ChatFragment : BaseFragment<ChatViewState, FragmentChatBinding>(FragmentCh
     }
 
     private fun FragmentChatBinding.render(viewState: Messages) {
-        messagesAdapter.submitList(viewState.messages)
+        messagesAdapter.submitList(viewState.messageItems)
     }
 
     private fun FragmentChatBinding.render(viewState: SendButtonEnabled) {
