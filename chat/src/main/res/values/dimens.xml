@@ -8,12 +8,12 @@
     <dimen name="chat_message_box_margin">16dp</dimen>
     <dimen name="chat_send_button_margin">16dp</dimen>
 
-    <dimen name="chat_parrot_name_margin_horizontal_close">12dp</dimen>
-    <dimen name="chat_parrot_name_margin_horizontal_far">48dp</dimen>
-
+    <dimen name="item_message_margin_horizontal_close">16dp</dimen>
+    <dimen name="item_message_margin_horizontal_far">48dp</dimen>
     <dimen name="item_message_padding">12dp</dimen>
     <dimen name="item_first_message_margin_top">16dp</dimen>
     <dimen name="item_last_message_margin_bottom">16dp</dimen>
     <dimen name="item_same_type_margin">4dp</dimen>
     <dimen name="item_different_type_margin">12dp</dimen>
+    <dimen name="item_tail_space_width">16dp</dimen>
 </resources>

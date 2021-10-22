@@ -18,6 +18,7 @@ private const val DATE_FORMAT = "dd.MM.yyyy"
 
 private val ONE_HOUR_IN_MILLIS = TimeUnit.HOURS.toMillis(1)
 private val ONE_WEEK_IN_MILLIS = TimeUnit.DAYS.toMillis(7)
+private val TWENTY_SECONDS_IN_MILLIS = TimeUnit.SECONDS.toMillis(20)
 
 class MessagesViewStateMapperImpl : MessagesViewStateMapper {
 
@@ -33,15 +34,25 @@ class MessagesViewStateMapperImpl : MessagesViewStateMapper {
                 messageViewModels.add(message.toMessageTimestamp())
             }
 
-            messageViewModels.add(message.toMessageItem())
+            messageViewModels.add(
+                message.toMessageItem(
+                    message.hasTail(messages.getOrNull(index + 1))
+                )
+            )
         }
 
         return Messages(messageViewModels)
     }
 
-    private fun Message.toMessageItem() = when (sender) {
-        Sender.USER -> UserMessage(id, message)
-        Sender.PARROT_BOT -> ParrotBotMessage(id, message)
+    private fun Message.toMessageItem(hasTail: Boolean) = when (sender) {
+        Sender.USER -> UserMessage(id, message, hasTail)
+        Sender.PARROT_BOT -> ParrotBotMessage(id, message, hasTail)
+    }
+
+    private fun Message.hasTail(next: Message?) = when {
+        next == null -> true
+        sender != next.sender -> true
+        else -> abs(timestamp - next.timestamp) >= TWENTY_SECONDS_IN_MILLIS
     }
 
     private fun Message.toMessageTimestamp() = MessageTimestamp(
