@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/ebony_clay"
-    tools:context=".start.StartActivity">
+    tools:context=".activity.ParrotBotActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/main_container"

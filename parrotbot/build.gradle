@@ -15,4 +15,9 @@ dependencies {
     implementation project(":core")
     implementation project(":chat")
     implementation project(":chatlib")
+    implementation project(":parrotbotlib")
+    implementation project(":applicationstatelib")
+
+    implementation WorkManager.workManager
+    implementation AndroidX.processLifecycle
 }

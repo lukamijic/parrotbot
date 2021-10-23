@@ -17,12 +17,14 @@ object AndroidX {
     private const val fragment_container_view_version = "1.3.6"
     private const val recycler_view_version = "1.2.1"
     private const val lifecycle_version = "2.4.0-rc01"
+    private const val lifecycle_process_version = "2.1.0"
 
     val appCompat = "androidx.appcompat:appcompat:$app_compat_version"
     val constraintLayout = "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
     val fragmentContainer = "androidx.fragment:fragment-ktx:$fragment_container_view_version"
     val recyclerView = "androidx.recyclerview:recyclerview:$recycler_view_version"
     val lifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    val processLifecycle = "androidx.lifecycle:lifecycle-process:$lifecycle_process_version"
 }
 
 object DI {
@@ -56,4 +58,10 @@ object Database {
     val room = "androidx.room:room-runtime:$room_version"
     val roomCompiler = "androidx.room:room-compiler:$room_version"
     val roomFlow = "androidx.room:room-ktx:$room_version"
+}
+
+object WorkManager {
+    private val work_manager_version = "2.7.0"
+
+    val workManager = "androidx.work:work-runtime-ktx:$work_manager_version"
 }
