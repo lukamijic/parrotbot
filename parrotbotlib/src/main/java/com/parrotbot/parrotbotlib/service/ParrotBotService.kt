@@ -2,6 +2,7 @@ package com.parrotbot.parrotbotlib.service
 
 import android.app.Service
 import android.content.Intent
+import android.os.Binder
 import android.os.IBinder
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
@@ -20,12 +21,14 @@ private const val PARROT_BOT_DELAY_SECONDS = 10L
 
 class ParrotBotService : Service(), KoinComponent {
 
+    private val binder = Binder()
+
     private val serviceScope = CoroutineScope(Dispatchers.Default + SupervisorJob())
 
     private val queryMessages: QueryMessages by inject()
     private val workManager: WorkManager by inject()
 
-    override fun onBind(intent: Intent): IBinder? = null
+    override fun onBind(intent: Intent): IBinder = binder
 
     override fun onCreate() {
         super.onCreate()
