@@ -1,0 +1,12 @@
+apply plugin: 'com.android.library'
+
+apply from: "$rootDir/buildSrc/src/CommonAndroid.gradle"
+apply plugin: 'kotlin-android'
+
+dependencies {
+    implementation project(":core")
+    implementation project(":chatlib")
+    implementation project(":applicationstatelib")
+
+    implementation WorkManager.workManager
+}

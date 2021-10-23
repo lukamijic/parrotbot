@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="parrotbot_message_notification_channel_name">ParrotBot Response Message</string>
+    <string name="parrotbot_message_notification_channel_description">Notifies When ParrotBot Responds</string>
+    <string name="parrotbot_message_notification_title">ParrotBot:</string>
+</resources>
