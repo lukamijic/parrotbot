@@ -53,7 +53,7 @@ object Concurrency {
 }
 
 object Database {
-    private val room_version = "2.3.0"
+    private val room_version = "2.4.0"
 
     val room = "androidx.room:room-runtime:$room_version"
     val roomCompiler = "androidx.room:room-compiler:$room_version"
